@@ -5,15 +5,18 @@ Summary:	Net::DNS::Resolver::Programmable - programmable DNS resolver class for 
 #Summary(pl.UTF-8):	
 Name:		perl-Net-DNS-Resolver-Programmable
 Version:	0.002.2
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	8f3e5481e069c1657b8b4aefbfeb3549
 URL:		http://search.cpan.org/dist/Net-DNS-Resolver-Programmable/
+BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-version
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-Net-DNS >= 0.59-2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
