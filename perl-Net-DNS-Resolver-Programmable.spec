@@ -2,7 +2,7 @@
 %define	pdir	Net
 %define	pnam	DNS-Resolver-Programmable
 Summary:	Net::DNS::Resolver::Programmable - programmable DNS resolver class for offline emulation of DNS
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	Net::DNS::Resolver::Programmable - klasa programowalnego resolvera DNS do emulacji DNS-a offline
 Name:		perl-Net-DNS-Resolver-Programmable
 Version:	0.002.2
 Release:	2
@@ -22,28 +22,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Net::DNS::Resolver::Programmable is a Net::DNS::Resolver descendant
-class that allows a virtual DNS to be emulated instead of querying the real
-DNS.  A set of static DNS records may be supplied, or arbitrary code may be
-specified as a means for retrieving DNS records, or even generating them on the
-fly.
+class that allows a virtual DNS to be emulated instead of querying the
+real DNS. A set of static DNS records may be supplied, or arbitrary
+code may be specified as a means for retrieving DNS records, or even
+generating them on the fly.
 
-The following constructor is provided:
-
-The following instance methods of Net::DNS::Resolver are also supported by
-Net::DNS::Resolver::Programmable:
-
-Currently the following methods of Net::DNS::Resolver are not supported:
-axfr, axfr_start, axfr_next, nameservers, port, srcport,
-srcaddr, bgsend, bgread, bgisready, tsig, retrans, retry,
-recurse, usevc, tcp_timeout, udp_timeout, persistent_tcp,
-persistent_udp, igntc, dnssec, cdflag, udppacketsize.
-The effects of using these on Net::DNS::Resolver::Programmable objects are
-undefined.
-
-
-
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Net::DNS::Resolver::Programmable to klasa potomna klasy
+Net::DNS::Resolver pozwalająca na emulowanie wirtualnego DNS-a zamiast
+odpytywania rzeczywistego. Można przekazać zbiór statycznych rekordów
+DNS, przekazać dowolny kod do odtwarzania rekordów DNS, a nawet
+generować je w locie.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
