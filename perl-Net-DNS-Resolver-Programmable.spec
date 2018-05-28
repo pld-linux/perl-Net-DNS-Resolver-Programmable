@@ -4,13 +4,13 @@
 Summary:	Net::DNS::Resolver::Programmable - programmable DNS resolver class for offline emulation of DNS
 Summary(pl.UTF-8):	Net::DNS::Resolver::Programmable - klasa programowalnego resolvera DNS do emulacji DNS-a offline
 Name:		perl-Net-DNS-Resolver-Programmable
-Version:	0.002.2
-Release:	2
+Version:	0.009
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	8f3e5481e069c1657b8b4aefbfeb3549
+# Source0-md5:	f42a7e7984c258db0ef127b217a2bcb4
 URL:		http://search.cpan.org/dist/Net-DNS-Resolver-Programmable/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -38,15 +38,16 @@ generować je w locie.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
+%{__perl} Makefile.PL \
 	destdir=$RPM_BUILD_ROOT \
 	installdirs=vendor
-./Build
+
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
