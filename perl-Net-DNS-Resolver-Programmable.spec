@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Net
 %define	pnam	DNS-Resolver-Programmable
 Summary:	Net::DNS::Resolver::Programmable - programmable DNS resolver class for offline emulation of DNS
